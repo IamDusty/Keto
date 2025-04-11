@@ -1,0 +1,722 @@
+/* Substitutions Section */
+.alternatives-section {
+    background-color: white;
+}
+
+.alternatives-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: var(--light-text);
+}
+
+.substitutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.substitution-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.substitution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.substitution-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.sub-image {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.substitution-card ul {
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.substitution-card li {
+    margin-bottom: 8px;
+    list-style-type: none;
+    position: relative;
+    padding-left: 25px;
+}
+
+.substitution-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.tip {
+    font-size: 14px;
+    background-color: rgba(59, 183, 143, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.tip i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}.alternatives {
+    margin-top: 20px;
+    background-color: rgba(59, 183, 143, 0.08);
+    border-radius: 10px;
+    padding: 15px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.alternatives h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.alternatives h4 i {
+    margin-right: 8px;
+}
+
+.alternatives-list {
+    margin-left: 10px;
+}
+
+.alternatives-list li {
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.alternatives-list li:hover {
+    transform: translateX(5px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.alternatives-list li:last-child {
+    margin-bottom: 0;
+}/* Base Styles */
+:root {
+    --primary-color: #3BB78F;
+    --primary-dark: #2D8E6E;
+    --secondary-color: #F6F9FC;
+    --accent-color: #FF6B6B;
+    --text-color: #333333;
+    --light-text: #6C757D;
+    --border-color: #E1E8ED;
+    --keto-yes: #3BB78F;
+    --keto-no: #FF6B6B;
+    --keto-maybe: #FFCE61;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #F9FBFD;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 183, 143, 0.2);
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(246,249,252,0.95) 100%), url('/api/placeholder/1200/600') center/cover no-repeat;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* Search Section */
+.search-section {
+    background-color: white;
+    text-align: center;
+}
+
+.search-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-text);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 183, 143, 0.1);
+}
+
+.search-results {
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 200px; /* Ensures consistent height even when empty */
+    transition: all 0.3s ease; /* Smooth transition when results change */
+}
+
+.food-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.food-status {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.food-status.keto {
+    background-color: var(--keto-yes);
+    color: white;
+}
+
+.food-status.not-keto {
+    background-color: var(--keto-no);
+    color: white;
+}
+
+.food-status.keto-limit {
+    background-color: var(--keto-maybe);
+    color: white;
+}
+
+.food-status i {
+    font-size: 24px;
+}
+
+.food-info h3 {
+    margin-bottom: 5px;
+}
+
+.food-info p {
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.food-details {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.detail {
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--secondary-color);
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+/* Guidelines Section */
+.guidelines-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.guidelines-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.macros-breakdown h3, .carb-limits h3 {
+    margin-bottom: 20px;
+}
+
+.macros-chart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.macro {
+    text-align: center;
+}
+
+.chart-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.chart-circle.fat {
+    background-color: var(--primary-color);
+}
+
+.chart-circle.protein {
+    background-color: #6C63FF;
+}
+
+.chart-circle.carbs {
+    background-color: var(--accent-color);
+}
+
+.carb-limits ul {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.carb-limits li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+/* Common Foods Section */
+.common-foods-section {
+    background-color: var(--secondary-color);
+}
+
+.common-foods-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.food-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.category h3 {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.category h3 i {
+    margin-right: 10px;
+}
+
+.category h3 i.fa-check-circle {
+    color: var(--keto-yes);
+}
+
+.category h3 i.fa-times-circle {
+    color: var(--keto-no);
+}
+
+.food-list li {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.food-list.keto-friendly li {
+    background-color: rgba(59, 183, 143, 0.1);
+}
+
+.food-list.non-keto li {
+    background-color: rgba(255, 107, 107, 0.1);
+}
+
+.food-list li:hover {
+    transform: translateX(5px);
+}
+
+/* Tips Section */
+.tips-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.tips-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.tip {
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.tip:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.tip i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.tip h3 {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #2F2F2F;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo i {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.footer-logo h2 {
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    color: #B0B0B0;
+}
+
+.disclaimer h3 {
+    margin-bottom: 15px;
+}
+
+.disclaimer p {
+    color: #B0B0B0;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #B0B0B0;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .about-content,
+    .guidelines-content,
+    .food-categories,
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .macros-chart {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .chart-circle {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .food-details {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .chart-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 1rem;
+    }
+    
+    .food-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .food-status {
+        margin-bottom: 10px;
+    }
+}

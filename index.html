@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KetoBuddy - Is It Keto?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <h1>KetoBuddy</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#search">Search</a>
+                    <a href="#about">About Keto</a>
+                    <a href="#guidelines">Guidelines</a>
+                    <a href="#alternatives">Substitutions</a>
+                    <a href="#common-foods">Common Foods</a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Is It <span>Keto</span>?</h1>
+                <p>Discover whether your favorite foods fit into the ketogenic diet</p>
+                <a href="#search" class="btn">Search Foods Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="search" class="search-section">
+        <div class="container">
+            <h2>Find Your Food</h2>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="food-search" placeholder="Search for a food item...">
+                </div>
+                <button id="search-btn" class="btn">Search</button>
+            </div>
+            <div id="search-results" class="search-results">
+                <!-- Results will be inserted here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>What is the Keto Diet?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>The ketogenic (keto) diet is a low-carb, high-fat diet that can help you burn fat more effectively. It has many benefits for weight loss, health, and performance.</p>
+                    <p>The keto diet drastically reduces carbohydrate intake and replaces it with fat. This reduction in carbs puts your body into a metabolic state called ketosis, where it becomes incredibly efficient at burning fat for energy.</p>
+                    <p>When following a keto diet, your body switches its fuel supply to run mostly on fat, burning fat 24-7. When insulin levels drop, fat burning can increase dramatically, making it easier to access your fat stores to burn them off.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/api/placeholder/400/320" alt="Keto diet foods">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="guidelines" class="guidelines-section">
+        <div class="container">
+            <h2>Keto Diet Guidelines</h2>
+            <div class="guidelines-content">
+                <div class="macros-breakdown">
+                    <h3>Macronutrient Breakdown</h3>
+                    <div class="macros-chart">
+                        <div class="macro">
+                            <div class="chart-circle fat">
+                                <span>70-80%</span>
+                            </div>
+                            <h4>Fats</h4>
+                        </div>
+                        <div class="macro">
+                            <div class="chart-circle protein">
+                                <span>20-25%</span>
+                            </div>
+                            <h4>Protein</h4>
+                        </div>
+                        <div class="macro">
+                            <div class="chart-circle carbs">
+                                <span>5-10%</span>
+                            </div>
+                            <h4>Carbs</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carb-limits">
+                    <h3>Daily Carb Limits</h3>
+                    <p>For most people, a keto diet means restricting carbohydrate intake to:</p>
+                    <ul>
+                        <li><strong>20-50g</strong> of net carbs per day</li>
+                        <li>Net carbs = Total carbs - Fiber</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="common-foods" class="common-foods-section">
+        <div class="container">
+            <h2>Common Keto Foods</h2>
+            <div class="food-categories">
+                <div class="category">
+                    <h3><i class="fas fa-check-circle"></i> Keto-Friendly Foods</h3>
+                    <ul class="food-list keto-friendly">
+                        <li>Eggs</li>
+                        <li>Meat (beef, pork, lamb)</li>
+                        <li>Poultry (chicken, turkey)</li>
+                        <li>Fatty fish (salmon, mackerel)</li>
+                        <li>Full-fat dairy (cheese, butter, cream)</li>
+                        <li>Low-carb vegetables (leafy greens, broccoli)</li>
+                        <li>Nuts and seeds (almonds, walnuts, flaxseeds)</li>
+                        <li>Avocados</li>
+                        <li>Olive oil and coconut oil</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3><i class="fas fa-times-circle"></i> Non-Keto Foods</h3>
+                    <ul class="food-list non-keto">
+                        <li>Grains (wheat, rice, corn, oats)</li>
+                        <li>Sugar and sugary foods</li>
+                        <li>Fruits (except small portions of berries)</li>
+                        <li>Starchy vegetables (potatoes, sweet potatoes)</li>
+                        <li>Legumes (beans, lentils, peas)</li>
+                        <li>Processed foods with added sugars</li>
+                        <li>Most condiments and sauces</li>
+                        <li>Alcohol (beer, sweet wines)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="alternatives" class="alternatives-section">
+        <div class="container">
+            <h2>Popular Keto Substitutions</h2>
+            <p class="section-intro">Missing your favorite non-keto foods? Try these keto-friendly alternatives!</p>
+            
+            <div class="substitutions-grid">
+                <div class="substitution-card">
+                    <h3>Rice Alternatives</h3>
+                    <div class="sub-image">
+                        <img src="/api/placeholder/200/160" alt="Cauliflower rice">
+                    </div>
+                    <ul>
+                        <li><strong>Cauliflower Rice</strong> - 3g carbs per cup</li>
+                        <li><strong>Broccoli Rice</strong> - 4g carbs per cup</li>
+                        <li><strong>Shirataki Rice</strong> - 1g carbs per cup</li>
+                    </ul>
+                    <p class="tip"><i class="fas fa-lightbulb"></i> Tip: Sauté cauliflower rice with butter and herbs for extra flavor.</p>
+                </div>
+                
+                <div class="substitution-card">
+                    <h3>Pasta Alternatives</h3>
+                    <div class="sub-image">
+                        <img src="/api/placeholder/200/160" alt="Zucchini noodles">
+                    </div>
+                    <ul>
+                        <li><strong>Zucchini Noodles</strong> - 3g carbs per cup</li>
+                        <li><strong>Shirataki Noodles</strong> - 0.5g carbs per cup</li>
+                        <li><strong>Spaghetti Squash</strong> - 7g carbs per cup</li>
+                    </ul>
+                    <p class="tip"><i class="fas fa-lightbulb"></i> Tip: Don't overcook veggie noodles or they'll become mushy.</p>
+                </div>
+                
+                <div class="substitution-card">
+                    <h3>Bread Alternatives</h3>
+                    <div class="sub-image">
+                        <img src="/api/placeholder/200/160" alt="Almond flour bread">
+                    </div>
+                    <ul>
+                        <li><strong>Almond Flour Bread</strong> - 3g carbs per slice</li>
+                        <li><strong>Cloud Bread</strong> - 0.5g carbs per piece</li>
+                        <li><strong>Flaxseed Bread</strong> - 1.5g carbs per slice</li>
+                    </ul>
+                    <p class="tip"><i class="fas fa-lightbulb"></i> Tip: Add psyllium husk to keto bread for better texture.</p>
+                </div>
+                
+                <div class="substitution-card">
+                    <h3>Potato Alternatives</h3>
+                    <div class="sub-image">
+                        <img src="/api/placeholder/200/160" alt="Mashed cauliflower">
+                    </div>
+                    <ul>
+                        <li><strong>Mashed Cauliflower</strong> - 4g carbs per cup</li>
+                        <li><strong>Turnips</strong> - 6g carbs per cup</li>
+                        <li><strong>Radishes</strong> - 2g carbs per cup</li>
+                    </ul>
+                    <p class="tip"><i class="fas fa-lightbulb"></i> Tip: Add cream cheese to mashed cauliflower for creaminess.</p>
+                </div>
+                
+                <div class="substitution-card">
+                    <h3>Sugar Alternatives</h3>
+                    <div class="sub-image">
+                        <img src="/api/placeholder/200/160" alt="Keto sweeteners">
+                    </div>
+                    <ul>
+                        <li><strong>Erythritol</strong> - 0g net carbs per tbsp</li>
+                        <li><strong>Stevia</strong> - 0g carbs per tsp</li>
+                        <li><strong>Monk Fruit</strong> - 0g carbs per tsp</li>
+                    </ul>
+                    <p class="tip"><i class="fas fa-lightbulb"></i> Tip: Blend sweeteners for better taste and fewer side effects.</p>
+                </div>
+                
+                <div class="substitution-card">
+                    <h3>Milk Alternatives</h3>
+                    <div class="sub-image">
+                        <img src="/api/placeholder/200/160" alt="Almond milk">
+                    </div>
+                    <ul>
+                        <li><strong>Almond Milk</strong> - 1g carbs per cup</li>
+                        <li><strong>Coconut Milk</strong> - 2g carbs per cup</li>
+                        <li><strong>Heavy Cream</strong> - 0.5g carbs per 1/4 cup</li>
+                    </ul>
+                    <p class="tip"><i class="fas fa-lightbulb"></i> Tip: Always choose unsweetened versions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips-section">
+        <div class="container">
+            <h2>Tips for Keto Success</h2>
+            <div class="tips-content">
+                <div class="tip">
+                    <i class="fas fa-water"></i>
+                    <h3>Stay Hydrated</h3>
+                    <p>Drink plenty of water. The keto diet can cause increased water loss.</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Meal Prep</h3>
+                    <p>Prepare meals in advance to avoid impulsive non-keto choices.</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Electrolytes</h3>
+                    <p>Maintain your sodium, potassium, and magnesium levels.</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Track Macros</h3>
+                    <p>Track your macronutrients, especially in the beginning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <h2>KetoBuddy</h2>
+                    <p>Your guide to keto-friendly eating</p>
+                </div>
+                <div class="disclaimer">
+                    <h3>Disclaimer</h3>
+                    <p>This website is for informational purposes only. Always consult with a healthcare professional before starting any diet.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 KetoBuddy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
